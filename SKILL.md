@@ -53,54 +53,52 @@ Activate this skill immediately whenever:
 
 ---
 
-## The 10x Workflow Protocols
+## The 10x Interactive Workflow: How the Agent Operates
 
-### Protocol 1: First-Install Creator Onboarding
-When running BoomX for the first time, diagnose the user's authentic story bank and style:
-```bash
-node scripts/onboarding_interview.js
-```
-Stores data to `.boomx_profile.json`, automatically injecting their exact metrics, projects, and voice rules into every draft.
+Whenever the user engages with BoomX, follow this interactive protocol:
 
-### Protocol 2: Guaranteed 95+ Viral Post Suite
-Drafts 4 distinct formats, verified against X's Heavy Ranker algorithm:
-```bash
-node scripts/generate_viral_post.js "Topic" "Milestone/Context"
-```
-Outputs:
-1. **The 2-Liner Pattern Interrupt** (High debate catalyst)
-2. **The Numbered Mistake Teardown** (3x+ retweet velocity)
-3. **The 5-Item Cheat Sheet / Swipe File** (+10x bookmark density)
-4. **The 5-Tweet Story Thread** (High dwell-time tension)
+### Step 1: The First-Install & Post Calibration Interview
+If no `.boomx_profile.json` exists, or when the user asks to write/schedule a post, proactively ask the user 3–4 clarifying questions:
+1. **The Topic / Story**: "What specific topic, product breakthrough, or milestone do you want to share?"
+2. **The Hard Numbers / Lesson**: "What is 1 concrete metric, dollar amount, timeframe, or mistake from this journey?"
+3. **The Voice Style**: Direct & Punchy, Contrarian Teardown, Vulnerable Builder, or Technical Data Nerd?
+4. **Primary Goal**: Conversation & Debate (75x boost), Bookmarks (cheat sheet), or Retweets (story/lesson)?
 
-### Protocol 3: Reply Radar (High-Conversion Commenting)
-Generate 4 persona-matched replies to build discovery on high-traffic timeline posts:
+Save their answers to `.boomx_profile.json` using:
 ```bash
-node scripts/reply_radar.js "Target creator tweet" "@handle"
+node scripts/onboarding_interview.js set '{"handle":"@user","niche":"...","project":"...","storyBank":"...","tone":"...","primaryGoal":"..."}'
 ```
 
-### Protocol 4: Post-Post-Mortem & Lever Diagnosis
-Extract the winning pattern from recent performance:
+### Step 2: Generate the 4-Format Viral Post Suite (95+ Heavy Ranker)
+Run:
 ```bash
-node scripts/post_post_mortem.js "Tweet text" <impressions> <likes> <replies> <bookmarks> [retweets]
+node scripts/generate_viral_post.js "<Topic>" "<Lesson / Numbers>"
 ```
+Outputs 4 verified formats pre-tested through the algorithm simulator:
+- **The 2-Liner Pattern Interrupt** (Engineered for debate & the 75x author-reply boost)
+- **The Numbered Failure Teardown** (Vulnerability + numbers, 3x+ retweets)
+- **The 5-Item Cheat Sheet** (High bookmark utility density)
+- **The 5-Tweet Story Thread** (Deep dwell time tension)
 
-### Protocol 5: Analytics Intelligence & Posting Heatmaps
+### Step 3: Deploy the Reply Radar (Growth & Community Engagement)
+To farm discovery on existing high-traffic conversations in that niche:
+```bash
+node scripts/reply_radar.js "<Target Tweet Text>" "@creatorHandle"
+```
+Presents 4 non-spammy, high-converting reply personas (*Tactical Depth*, *Respectful Contrarian*, *Data Benchmark*, *Punchy Resonance*).
+
+### Step 4: Analytics Intelligence & Optimal Heatmaps
+Diagnose current momentum and recommend the highest-traffic posting window:
 ```bash
 node scripts/analytics_intelligence.js
 ```
 
-### Protocol 6: Direct X API v2 Publishing & Scheduling (Universal BYOK)
+### Step 5: Direct X API Publishing & Scheduling (Universal BYOK)
+Publish immediately or add to the local queue:
 ```bash
-# Verify credentials
-node scripts/x_publisher.js verify-auth
+# Instant publish
+node scripts/x_publisher.js publish "<Chosen Tweet Copy>"
 
-# Publish immediately
-node scripts/x_publisher.js publish "Your high-performing tweet content"
-
-# Schedule post
-node scripts/x_publisher.js schedule "Your post content" "2026-10-30T15:00:00Z"
-
-# Process queue
-node scripts/x_publisher.js run-pending
+# Schedule for peak window
+node scripts/x_publisher.js schedule "<Chosen Tweet Copy>" "2026-10-30T15:00:00Z"
 ```
