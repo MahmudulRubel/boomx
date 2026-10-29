@@ -104,7 +104,7 @@ function generateOAuthHeader(method, url, extraParams = {}) {
   return `OAuth ${headerParts.join(', ')}`;
 }
 
-async function postTweet(text) {
+async function postTweet(text, inReplyToTweetId = null) {
   const { valid, missing } = checkCredentials();
   if (!valid) {
     throw new Error(`Missing X API credentials: ${missing.join(', ')}. Please configure them in your .env file.`);
@@ -112,7 +112,12 @@ async function postTweet(text) {
 
   const endpoint = 'https://api.twitter.com/2/tweets';
   const authHeader = generateOAuthHeader('POST', endpoint);
-  const payload = JSON.stringify({ text });
+  
+  const body = { text };
+  if (inReplyToTweetId) {
+    body.reply = { in_reply_to_tweet_id: String(inReplyToTweetId).trim() };
+  }
+  const payload = JSON.stringify(body);
 
   return new Promise((resolve, reject) => {
     const req = https.request(endpoint, {
@@ -162,13 +167,14 @@ function saveScheduled(list) {
   fs.writeFileSync(SCHEDULE_FILE, JSON.stringify(list, null, 2));
 }
 
-function scheduleTweet(text, scheduledTimeISO) {
+function scheduleTweet(text, scheduledTimeISO, inReplyToTweetId = null) {
   const list = getScheduled();
   const id = `sched_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
   const item = {
     id,
     text,
     scheduledAt: scheduledTimeISO,
+    inReplyToTweetId: inReplyToTweetId ? String(inReplyToTweetId).trim() : null,
     status: 'pending',
     createdAt: new Date().toISOString()
   };
@@ -185,7 +191,7 @@ async function runPendingScheduled() {
   for (const item of list) {
     if (item.status === 'pending' && new Date(item.scheduledAt) <= now) {
       try {
-        const res = await postTweet(item.text);
+        const res = await postTweet(item.text, item.inReplyToTweetId);
         item.status = 'published';
         item.publishedAt = new Date().toISOString();
         item.tweetId = res.data?.id;
@@ -225,21 +231,35 @@ if (require.main === module) {
         console.error(err.message);
         process.exit(1);
       });
+  } else if (command === 'reply') {
+    const tweetId = process.argv[3];
+    const text = process.argv[4];
+    if (!tweetId || !text) {
+      console.error("Usage: node x_publisher.js reply <inReplyToTweetId> \"<Reply Text>\"");
+      process.exit(1);
+    }
+    postTweet(text, tweetId)
+      .then(res => console.log(JSON.stringify(res, null, 2)))
+      .catch(err => {
+        console.error(err.message);
+        process.exit(1);
+      });
   } else if (command === 'schedule') {
     const text = process.argv[3];
     const time = process.argv[4];
+    const inReplyToId = process.argv[5] || null;
     if (!text || !time) {
-      console.error("Usage: node x_publisher.js schedule \"<Tweet Text>\" \"<ISO DateTime>\"");
+      console.error("Usage: node x_publisher.js schedule \"<Tweet Text>\" \"<ISO DateTime>\" [inReplyToTweetId]");
       process.exit(1);
     }
-    const item = scheduleTweet(text, time);
+    const item = scheduleTweet(text, time, inReplyToId);
     console.log(JSON.stringify({ status: "scheduled", item }, null, 2));
   } else if (command === 'list') {
     console.log(JSON.stringify(getScheduled(), null, 2));
   } else if (command === 'run-pending') {
     runPendingScheduled().then(res => console.log(JSON.stringify(res, null, 2)));
   } else {
-    console.log("Usage: node x_publisher.js [verify-auth | publish | schedule | list | run-pending]");
+    console.log("Usage: node x_publisher.js [verify-auth | publish | reply | schedule | list | run-pending]");
   }
 }
 
