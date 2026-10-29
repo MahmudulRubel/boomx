@@ -1,15 +1,15 @@
 /**
- * SuperX API Client
- * Reverse-engineered REST interface for api.superx.tools & app.superx.so.
+ * PulseX API Client
+ * Reverse-engineered REST interface with universal simulation fallback.
  */
 
 const https = require('https');
 const { simulate } = require('./predict_algorithm');
 const { generateAngles } = require('./generate_angles');
 
-class SuperXClient {
+class PulseXClient {
   constructor(options = {}) {
-    this.token = options.token || process.env.SUPERX_TOKEN || null;
+    this.token = options.token || process.env.PULSEX_TOKEN || null;
     this.apiHost = options.apiHost || "https://api.superx.tools";
     this.scheduleHost = options.scheduleHost || "https://app.superx.so";
   }
@@ -107,4 +107,4 @@ class SuperXClient {
   }
 }
 
-module.exports = SuperXClient;
+module.exports = PulseXClient;

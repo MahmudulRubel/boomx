@@ -1,18 +1,18 @@
 ---
-name: superx
-description: Transform X (Twitter) growth, content creation, and analytics into an automated powerhouse reverse-engineered from SuperX (superx.so). Use whenever the user mentions SuperX, superx.so, X growth, Twitter analytics, Heavy Ranker algorithm prediction, A/B testing tweets, post-post-mortem analysis, 3-angle content generation, lead signal scanning, high-conversion replies, or scheduling and growth on X/Twitter.
+name: pulsex
+description: Transform X (Twitter) growth, content creation, and analytics into an automated powerhouse. Use whenever the user mentions PulseX, pulsex, SuperX, superx.so, X growth, Twitter analytics, Heavy Ranker algorithm prediction, A/B testing tweets, post-post-mortem analysis, 3-angle content generation, lead signal scanning, high-conversion replies, or scheduling and growth on X/Twitter.
 ---
 
-# SuperX Growth & Intelligence Skill
+# PulseX Growth & Algorithm Intelligence Skill
 
-An independent, full-lifecycle X (Twitter) growth, intelligence, and content engine—reverse-engineered directly from [SuperX](https://superx.so) (`superx.so`, `app.superx.so`, and Chrome Extension `bjobgelaoehgbnklgcaaehdpckmhkplk`) using the REA (Reverse Engineer Anything) suite.
+An independent, full-lifecycle X (Twitter) growth, intelligence, and content engine with Universal BYOK (Bring Your Own Keys)—reverse-engineered from [SuperX](https://superx.so) (`superx.so`, `app.superx.so`, and Chrome Extension `bjobgelaoehgbnklgcaaehdpckmhkplk`) using the REA (Reverse Engineer Anything) suite.
 
 ---
 
 ## When to Use This Skill
 
 Activate this skill immediately whenever:
-- The user mentions **SuperX**, **superx.so**, or SuperX browser tools.
+- The user mentions **PulseX**, **pulsex**, **SuperX**, or X growth tools.
 - The user wants to **predict or simulate how the X recommendation algorithm (Heavy Ranker)** will score their tweet before publishing.
 - The user wants **A/B tweet testing** to compare two drafts with specific algorithm improvements.
 - The user needs **3 contrasting content angles** (Pattern Interrupt, Contrarian, Numbered Mistake) from an idea, URL, or notes.
@@ -20,16 +20,17 @@ Activate this skill immediately whenever:
 - The user wants **Lead Signal Scanning & Sentiment Slicing** on X audience replies or lists (pricing questions, hiring, competitor complaints).
 - The user wants **Contextual high-value replies** generated with specific tones (`insightful`, `contrarian`, `analytical`, `supportive`).
 - The user wants to craft viral hooks from a database of 10M+ proven post structures.
+- The user wants to **schedule or publish posts directly to X** using their own X Developer API keys (Universal BYOK).
 
 ---
 
 ## Architectural Blueprint (Reverse-Engineered via REA)
 
-Inspection of SuperX's live web application and Chrome extension bundle revealed the following production pipeline:
+Inspection of production application assets and client runtimes revealed the following pipeline:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                          SuperX System Flow                            │
+│                          PulseX System Flow                            │
 └────────────────────────────────────────────────────────────────────────┘
                                     │
            ┌────────────────────────┴────────────────────────┐
@@ -54,8 +55,9 @@ Iterative Feedback & Voice Polishing            Post-Post-Mortem Engine
            └────────────────────────┬────────────────────────┘
                                     ▼
                      High-Velocity Publication & Queue
-                     - Auto-retweet timing
-                     - Bluesky cross-posting
+                     - Universal BYOK X API v2 Publishing
+                     - Local & Background Queue Scheduling
+                     - Auto-retweet windows & cross-posting
 ```
 
 ### Core API Specifications
@@ -69,7 +71,7 @@ Iterative Feedback & Voice Polishing            Post-Post-Mortem Engine
 
 ---
 
-## The 9 Core SuperX Workflows
+## The 9 Core PulseX Workflows
 
 ### 1. Algorithm Performance Predictor & A/B Simulator
 
@@ -99,7 +101,7 @@ node scripts/generate_angles.js "SaaS Onboarding" "We removed 4 steps and activa
 
 ### 3. Voice-Matched AI Writer & Creator Rules
 
-Enforces strict anti-slop rules reverse-engineered from SuperX's personal voice engine:
+Enforces strict anti-slop rules reverse-engineered from creator voice engines:
 1. **Never use emojis** in hooks unless categorizing bullet points.
 2. **Never ask rhetorical questions** as opening hooks ("Have you ever wondered...?").
 3. **Zero corporate throat-clearing** ("In today's fast-paced world", "Let's dive in", "A thread 🧵").
@@ -134,7 +136,7 @@ Run scanner:
 node scripts/lead_signal_scanner.js
 ```
 
-### 7. Smart Scheduling, Heatmap Timing & Direct X API Publishing
+### 7. Smart Scheduling & Direct X API Publishing (Universal BYOK)
 
 You can connect your own X API credentials to publish immediately or schedule tweets directly:
 1. Add your keys to `.env`:
@@ -172,12 +174,12 @@ Access 10M+ viral post structures categorized by goal:
 - **Replies**: Polarizing trade-offs, hot takes, "Agree or disagree?".
 - **Retweets**: Vulnerable failure stories, counter-intuitive data points.
 
-### 9. Programmatic SuperX Client SDK
+### 9. Programmatic PulseX Client SDK
 
 Use the bundled Node.js client in automation workflows:
 ```javascript
-const SuperXClient = require('./scripts/superx_client');
-const client = new SuperXClient({ token: process.env.SUPERX_TOKEN });
+const PulseXClient = require('./scripts/pulsex_client');
+const client = new PulseXClient({ token: process.env.PULSEX_TOKEN });
 
 // Simulate algorithm score
 const prediction = await client.predictAlgorithm(draftA, draftB);

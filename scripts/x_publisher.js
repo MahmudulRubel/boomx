@@ -145,7 +145,7 @@ async function postTweet(text) {
   });
 }
 
-const SCHEDULE_FILE = path.resolve(process.cwd(), '.superx_scheduled.json');
+const SCHEDULE_FILE = path.resolve(process.cwd(), '.pulsex_scheduled.json');
 
 function getScheduled() {
   if (fs.existsSync(SCHEDULE_FILE)) {

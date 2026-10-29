@@ -1,6 +1,6 @@
-# SuperX Agent Skill: Autonomous X (Twitter) Growth & Algorithm Intelligence
+# PulseX: Autonomous X (Twitter) Growth & Algorithm Intelligence Engine
 
-An independent, full-lifecycle X (Twitter) growth, intelligence, and content skill reverse-engineered from [SuperX](https://superx.so) using the **REA (Reverse Engineer Anything)** suite.
+An independent, full-lifecycle X (Twitter) growth, intelligence, and content skill with Universal BYOK (Bring Your Own Keys)—reverse-engineered from [SuperX](https://superx.so) using the **REA (Reverse Engineer Anything)** suite.
 
 Designed for AI agent environments (Google Antigravity, Claude Code, Cursor, Windsurf) and standalone terminal execution.
 
@@ -18,7 +18,7 @@ Designed for AI agent environments (Google Antigravity, Claude Code, Cursor, Win
    - Analyzes 24-hour performance metrics against creator baselines, isolates the primary winning lever (`Hook`, `Conversation`, `Utility`), extracts the winning pattern, and prescribes future drafts.
 4. **Audience Lead Signal Scanner & X CRM**:
    - Slices timeline replies and list members by buying intent (pricing questions, competitor complaints, tool comparisons, hiring) and drafts 1-to-1 DMs formatted for card-based operator approval.
-5. **Direct X API v2 Publishing & Scheduling**:
+5. **Direct X API v2 Publishing & Scheduling (Universal BYOK)**:
    - Native zero-dependency OAuth 1.0a signing to publish immediately to X or schedule posts for peak engagement windows.
 
 ---
@@ -28,10 +28,10 @@ Designed for AI agent environments (Google Antigravity, Claude Code, Cursor, Win
 ```
 .
 ├── SKILL.md                          # Primary agent skill instructions and trigger metadata
-├── .env.example                      # Template for X API & SuperX credentials
+├── .env.example                      # Template for X API & PulseX credentials
 ├── references/
 │   ├── api-spec.md                   # 55+ reverse-engineered REST endpoints and schemas
-│   ├── growth-playbook.md            # SuperX's 2026 growth strategy & engagement routines
+│   ├── growth-playbook.md            # Modern X growth strategy & engagement routines
 │   ├── hook-templates.md             # Curated viral hook formulas categorized by goal
 │   └── x-algorithm-weights.md        # Mathematical model of X's Heavy Ranker weights
 └── scripts/
@@ -39,7 +39,7 @@ Designed for AI agent environments (Google Antigravity, Claude Code, Cursor, Win
     ├── generate_angles.js            # 3-angle content generator
     ├── post_post_mortem.js           # Metric multiplier & lever diagnosis tool
     ├── lead_signal_scanner.js        # Audience sentiment and buying-intent scanner
-    ├── superx_client.js              # Programmatic SDK with local fallback
+    ├── pulsex_client.js              # Programmatic SDK with local fallback
     └── x_publisher.js                # Native OAuth 1.0a publisher & local queue scheduler
 ```
 
@@ -65,7 +65,7 @@ Pinpoint why a tweet succeeded or underperformed:
 node scripts/post_post_mortem.js "The 3 billing mistakes that cost us $140k:" <impressions> <likes> <replies> <bookmarks> [retweets]
 ```
 
-### 4. Direct X Publishing & Scheduling
+### 4. Direct X Publishing & Scheduling (Universal BYOK)
 1. Copy `.env.example` to `.env` and fill in your X Developer credentials:
    ```bash
    cp .env.example .env
@@ -95,13 +95,13 @@ node scripts/post_post_mortem.js "The 3 billing mistakes that cost us $140k:" <i
 ### Antigravity & Gemini CLI
 Copy the skill folder to your agent skills configuration:
 ```bash
-cp -r . ~/.gemini/config/skills/superx/
+cp -r . ~/.gemini/config/skills/pulsex/
 ```
 
 ### Claude Code
 Add to your project's `skills/` directory or global skill configuration:
 ```bash
-cp -r . ~/.claude/skills/superx/
+cp -r . ~/.claude/skills/pulsex/
 ```
 
 ---
