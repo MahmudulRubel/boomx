@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * SuperX 3-Angle Content Generator
+ * BoomX 3-Angle Content Generator
  * Generates 3 contrasting high-converting angles from any idea, topic, or URL.
  */
 

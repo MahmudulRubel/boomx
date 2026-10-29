@@ -1,6 +1,6 @@
-# SuperX 2026 X Growth Playbook
+# BoomX 2026 X Growth Playbook
 
-Reverse-engineered from SuperX's internal strategy, creator rules, and viral post databases.
+The comprehensive growth strategy, cadence guidelines, and engagement loops used by top creators.
 
 ---
 

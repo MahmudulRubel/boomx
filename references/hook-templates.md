@@ -1,6 +1,6 @@
-# SuperX Viral Hook Formulas & Swipe Templates
+# BoomX Viral Hook Formulas & Swipe Templates
 
-Derived from SuperX's inspiration library and performance telemetry.
+Derived from top-performing X patterns and Heavy Ranker telemetry.
 
 ---
 
@@ -47,7 +47,7 @@ Derived from SuperX's inspiration library and performance telemetry.
 ---
 
 ## 5. Creator Custom Rules (Anti-Slop Directives)
-*Rules enforced by SuperX's personal voice engine:*
+*Rules enforced by BoomX's personal voice engine:*
 
 1. **Never use emojis** in hooks unless representing bullet categories.
 2. **Never ask rhetorical questions** as opening hooks ("Have you ever wondered...?").

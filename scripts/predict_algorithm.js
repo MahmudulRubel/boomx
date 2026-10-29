@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * SuperX Algorithm Performance Predictor & A/B Simulator
+ * BoomX Algorithm Performance Predictor & A/B Simulator
  * Evaluates candidate tweets against X's Heavy Ranker recommendation algorithm.
  */
 

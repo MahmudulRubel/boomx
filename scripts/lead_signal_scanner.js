@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * SuperX Lead Signal Scanner & CRM Slicer
+ * BoomX Lead Signal Scanner & CRM Slicer
  * Slices audience replies/lists by buying intent and generates card-ready personalized outreach.
  */
 

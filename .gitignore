@@ -1,15 +1,12 @@
-# Decompiled/reverse-engineered source artifacts
-extracted_extension/
-*.crx
-*.zip
-
 # Secrets & Environment variables
 .env
 .env.*
 !.env.example
 
 # Local scheduling & database
-.superx_scheduled.json
+.boomx_scheduled.json
+.boomx_profile.json
+.boomx_vault.json
 
 # Node dependencies
 node_modules/

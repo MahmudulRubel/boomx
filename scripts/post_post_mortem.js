@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * SuperX Post-Post-Mortem Engine
+ * BoomX Post-Post-Mortem Engine
  * Analyzes post metrics against creator baseline, pinpoints the winning lever,
  * and prescribes exact shapes for future posts.
  */

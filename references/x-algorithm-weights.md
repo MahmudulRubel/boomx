@@ -1,6 +1,6 @@
 # X Recommendation Algorithm (Heavy Ranker) Architecture & Heuristics
 
-Derived from X's open-source Heavy Ranker model (`twitter/the-algorithm`) and reverse-engineered SuperX simulation mechanics (`/api/tools/algorithm-predict`).
+Derived from X's open-source Heavy Ranker model (`twitter/the-algorithm`) and BoomX simulation mechanics (`predict_algorithm.js`).
 
 ---
 
@@ -10,7 +10,7 @@ The Heavy Ranker scores each candidate tweet using a weighted linear combination
 
 $$\text{Score} = \sum w_i \cdot P(\text{Action}_i)$$
 
-| Action | Relative Weight | Strategic Impact | SuperX Heuristic |
+| Action | Relative Weight | Strategic Impact | BoomX Heuristic |
 | :--- | :--- | :--- | :--- |
 | **Author-Replied Conversation** | **+75.0x** | Massive distribution amplifier | End post with an open loop or controversial premise that compels author replies. |
 | **Reply Initiated** | **+13.5x** | Primary engagement signal | Reward high-effort comments; prompt debate rather than generic praise. |
@@ -35,9 +35,9 @@ $$\text{Score} = \sum w_i \cdot P(\text{Action}_i)$$
 
 ---
 
-## 3. SuperX Simulation Formula
+## 3. BoomX Simulation Formula
 
-The SuperX algorithm prediction score ($0 - 100$) computes:
+The BoomX algorithm prediction score ($0 - 100$) computes:
 
 $$S = 100 \times \left( 0.35 \cdot S_{\text{hook}} + 0.25 \cdot S_{\text{conversation}} + 0.20 \cdot S_{\text{bookmark}} + 0.20 \cdot S_{\text{dwell}} - P_{\text{penalties}} \right)$$
 

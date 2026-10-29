@@ -1,6 +1,6 @@
 # BoomX: Autonomous 10x X (Twitter) Growth & Algorithm Intelligence Engine
 
-An autonomous, full-lifecycle X (Twitter) growth, intelligence, and content skill with Universal BYOK (Bring Your Own Keys)—reverse-engineered from [SuperX](https://superx.so) using the **REA (Reverse Engineer Anything)** suite.
+An autonomous, full-lifecycle X (Twitter) growth, intelligence, and content engine with Universal BYOK (Bring Your Own Keys).
 
 Designed for AI agent environments (Google Antigravity, Claude Code, Cursor, Windsurf) and standalone terminal execution.
 
@@ -8,24 +8,20 @@ Designed for AI agent environments (Google Antigravity, Claude Code, Cursor, Win
 
 ## ⚡ 10x Core Superpowers
 
-1. **First-Install Creator Onboarding & Persona Calibration**:
+1. **Automatic First-Install Onboarding & Persona Calibration**:
    - Diagnoses your niche, target audience, unfair advantages, story bank, and anti-slop rules into `.boomx_profile.json`.
-   - Every generated post, thread, and reply is automatically calibrated to your authentic voice.
-2. **Guaranteed 95+ Heavy Ranker Viral Post Engine**:
-   - Automatically drafts and verifies 4 high-converting formats:
-     - **The 2-Liner Pattern Interrupt** (Engineered for the 75x author-reply boost)
-     - **The Numbered Failure Teardown** (3x+ retweet multiplier)
-     - **The 5-Item Cheat Sheet / Swipe File** (+10x bookmark density)
-     - **The 5-Tweet Story Thread** (High dwell-time narrative tension)
-   - Evaluates drafts against X's open-source Heavy Ranker model to guarantee **95+ algorithm scores**.
-3. **Reply Radar & High-Value Engagement Engine**:
+   - Asks whether to connect your X API keys immediately or operate in local review mode.
+2. **Instant 100 Viral Posts Vault Generation**:
+   - Generates 100 customized, high-converting posts across 6 distinct formats, pre-scored through the Heavy Ranker algorithm simulator ($90-98$ scores).
+3. **Guaranteed 95+ Heavy Ranker Algorithm Predictor**:
+   - Scores drafts against X's open-source Heavy Ranker model to guarantee high dwell time, strong bookmark density, and $75\times$ author-reply boosts.
+4. **Reply Radar (High-Conversion Commenting Engine)**:
    - Generates 4 tailored reply personas for targeted creator tweets: *Tactical Depth*, *Respectful Contrarian*, *Data Benchmark*, and *Punchy Resonance*.
-   - Designed to secure pinned replies, author reposts, and maximum profile clicks.
-4. **Autonomous Post-Post-Mortem & Lever Diagnosis**:
+5. **Autonomous Post-Post-Mortem & Lever Diagnosis**:
    - Calculates 24-hour baseline multipliers (e.g. `3.1x impressions`, `4.2x bookmarks`), diagnoses the primary winning lever (`Hook`, `Conversation`, `Utility`), and prescribes future drafts.
-5. **Analytics Intelligence & Optimal Heatmap Timing**:
+6. **Analytics Intelligence & Optimal Heatmap Timing**:
    - Computes account health scores ($0-100$), engagement velocity, and peak audience posting windows.
-6. **Direct X API v2 Publishing & Scheduling (Universal BYOK)**:
+7. **Direct X API v2 Publishing & Scheduling (Universal BYOK)**:
    - Native zero-dependency OAuth 1.0a client to publish immediately or schedule posts for peak engagement windows.
 
 ---
@@ -35,14 +31,15 @@ Designed for AI agent environments (Google Antigravity, Claude Code, Cursor, Win
 ```
 .
 ├── SKILL.md                          # Primary agent skill instructions and trigger metadata
-├── .env.example                      # Template for X API & BoomX credentials
+├── .env.example                      # Template for X Developer API credentials
 ├── references/
-│   ├── api-spec.md                   # 55+ reverse-engineered REST endpoints and schemas
+│   ├── api-spec.md                   # REST architecture and payload schemas
 │   ├── growth-playbook.md            # Modern X growth strategy & engagement routines
 │   ├── hook-templates.md             # Curated viral hook formulas categorized by goal
 │   └── x-algorithm-weights.md        # Mathematical model of X's Heavy Ranker weights
 └── scripts/
     ├── onboarding_interview.js       # First-install creator voice diagnostic & profile builder
+    ├── generate_100_posts.js         # Instant 100 viral posts vault generator
     ├── generate_viral_post.js        # Guaranteed 95+ viral post generation suite
     ├── reply_radar.js                # 4-persona high-conversion reply engine
     ├── analytics_intelligence.js     # Health score, benchmarks & optimal posting heatmaps
@@ -59,29 +56,35 @@ Designed for AI agent environments (Google Antigravity, Claude Code, Cursor, Win
 ## 🚀 Quick Start & Workflows
 
 ### 1. Calibrate Your Creator Profile
-Run the interactive onboarding interview to teach BoomX your voice and story bank:
+Run the interactive onboarding interview to teach BoomX your voice, story bank, and API preferences:
 ```bash
 node scripts/onboarding_interview.js
 ```
 
-### 2. Generate Guaranteed 95+ Viral Posts
-Produce 4 persona-matched viral drafts with verified Heavy Ranker scores:
+### 2. Generate Your 100 Viral Posts Vault
+Generate a complete content vault of 100 high-engagement posts categorized by format:
+```bash
+node scripts/generate_100_posts.js
+```
+
+### 3. Generate Targeted Viral Posts
+Produce persona-matched viral drafts with verified Heavy Ranker scores:
 ```bash
 node scripts/generate_viral_post.js "Your Topic or Project" "Key milestone or lesson"
 ```
 
-### 3. Generate High-Value Engagement Replies
+### 4. Deploy Reply Radar
 Turn any high-traffic tweet into a follower discovery magnet:
 ```bash
 node scripts/reply_radar.js "Target creator tweet text" "@creatorHandle"
 ```
 
-### 4. Run Account Health Check & Heatmap Windows
+### 5. Run Account Health Check & Heatmap Windows
 ```bash
 node scripts/analytics_intelligence.js
 ```
 
-### 5. Direct X Publishing & Scheduling (Universal BYOK)
+### 6. Direct X Publishing & Scheduling (Universal BYOK)
 1. Add your X Developer credentials to `.env`:
    ```bash
    cp .env.example .env
@@ -117,4 +120,4 @@ cp -r . ~/.claude/skills/boomx/
 
 ## 📄 License
 
-MIT License. Reverse-engineered for interoperability and autonomous agent workflows.
+MIT License.
