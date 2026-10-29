@@ -1,9 +1,9 @@
 ---
-name: pulsex
-description: Transform X (Twitter) growth, content creation, and analytics into an automated powerhouse. Use whenever the user mentions PulseX, pulsex, SuperX, superx.so, X growth, Twitter analytics, Heavy Ranker algorithm prediction, A/B testing tweets, post-post-mortem analysis, 3-angle content generation, lead signal scanning, high-conversion replies, or scheduling and growth on X/Twitter.
+name: boomx
+description: Transform X (Twitter) growth, content creation, and analytics into an automated powerhouse. Use whenever the user mentions BoomX, boomx, SuperX, superx.so, PulseX, X growth, Twitter analytics, Heavy Ranker algorithm prediction, A/B testing tweets, post-post-mortem analysis, 3-angle content generation, lead signal scanning, high-conversion replies, or scheduling and growth on X/Twitter.
 ---
 
-# PulseX Growth & Algorithm Intelligence Skill
+# BoomX Growth & Algorithm Intelligence Skill
 
 An independent, full-lifecycle X (Twitter) growth, intelligence, and content engine with Universal BYOK (Bring Your Own Keys)—reverse-engineered from [SuperX](https://superx.so) (`superx.so`, `app.superx.so`, and Chrome Extension `bjobgelaoehgbnklgcaaehdpckmhkplk`) using the REA (Reverse Engineer Anything) suite.
 
@@ -12,7 +12,7 @@ An independent, full-lifecycle X (Twitter) growth, intelligence, and content eng
 ## When to Use This Skill
 
 Activate this skill immediately whenever:
-- The user mentions **PulseX**, **pulsex**, **SuperX**, or X growth tools.
+- The user mentions **BoomX**, **boomx**, **SuperX**, **PulseX**, or X growth tools.
 - The user wants to **predict or simulate how the X recommendation algorithm (Heavy Ranker)** will score their tweet before publishing.
 - The user wants **A/B tweet testing** to compare two drafts with specific algorithm improvements.
 - The user needs **3 contrasting content angles** (Pattern Interrupt, Contrarian, Numbered Mistake) from an idea, URL, or notes.
@@ -30,7 +30,7 @@ Inspection of production application assets and client runtimes revealed the fol
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                          PulseX System Flow                            │
+│                          BoomX System Flow                             │
 └────────────────────────────────────────────────────────────────────────┘
                                     │
            ┌────────────────────────┴────────────────────────┐
@@ -71,7 +71,7 @@ Iterative Feedback & Voice Polishing            Post-Post-Mortem Engine
 
 ---
 
-## The 9 Core PulseX Workflows
+## The 9 Core BoomX Workflows
 
 ### 1. Algorithm Performance Predictor & A/B Simulator
 
@@ -174,12 +174,12 @@ Access 10M+ viral post structures categorized by goal:
 - **Replies**: Polarizing trade-offs, hot takes, "Agree or disagree?".
 - **Retweets**: Vulnerable failure stories, counter-intuitive data points.
 
-### 9. Programmatic PulseX Client SDK
+### 9. Programmatic BoomX Client SDK
 
 Use the bundled Node.js client in automation workflows:
 ```javascript
-const PulseXClient = require('./scripts/pulsex_client');
-const client = new PulseXClient({ token: process.env.PULSEX_TOKEN });
+const BoomXClient = require('./scripts/boomx_client');
+const client = new BoomXClient({ token: process.env.BOOMX_TOKEN });
 
 // Simulate algorithm score
 const prediction = await client.predictAlgorithm(draftA, draftB);

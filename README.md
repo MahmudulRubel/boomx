@@ -1,4 +1,4 @@
-# PulseX: Autonomous X (Twitter) Growth & Algorithm Intelligence Engine
+# BoomX: Autonomous X (Twitter) Growth & Algorithm Intelligence Engine
 
 An independent, full-lifecycle X (Twitter) growth, intelligence, and content skill with Universal BYOK (Bring Your Own Keys)—reverse-engineered from [SuperX](https://superx.so) using the **REA (Reverse Engineer Anything)** suite.
 
@@ -28,7 +28,7 @@ Designed for AI agent environments (Google Antigravity, Claude Code, Cursor, Win
 ```
 .
 ├── SKILL.md                          # Primary agent skill instructions and trigger metadata
-├── .env.example                      # Template for X API & PulseX credentials
+├── .env.example                      # Template for X API & BoomX credentials
 ├── references/
 │   ├── api-spec.md                   # 55+ reverse-engineered REST endpoints and schemas
 │   ├── growth-playbook.md            # Modern X growth strategy & engagement routines
@@ -39,7 +39,7 @@ Designed for AI agent environments (Google Antigravity, Claude Code, Cursor, Win
     ├── generate_angles.js            # 3-angle content generator
     ├── post_post_mortem.js           # Metric multiplier & lever diagnosis tool
     ├── lead_signal_scanner.js        # Audience sentiment and buying-intent scanner
-    ├── pulsex_client.js              # Programmatic SDK with local fallback
+    ├── boomx_client.js               # Programmatic SDK with local fallback
     └── x_publisher.js                # Native OAuth 1.0a publisher & local queue scheduler
 ```
 
@@ -95,13 +95,13 @@ node scripts/post_post_mortem.js "The 3 billing mistakes that cost us $140k:" <i
 ### Antigravity & Gemini CLI
 Copy the skill folder to your agent skills configuration:
 ```bash
-cp -r . ~/.gemini/config/skills/pulsex/
+cp -r . ~/.gemini/config/skills/boomx/
 ```
 
 ### Claude Code
 Add to your project's `skills/` directory or global skill configuration:
 ```bash
-cp -r . ~/.claude/skills/pulsex/
+cp -r . ~/.claude/skills/boomx/
 ```
 
 ---

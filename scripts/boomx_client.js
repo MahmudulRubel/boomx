@@ -1,5 +1,5 @@
 /**
- * PulseX API Client
+ * BoomX API Client
  * Reverse-engineered REST interface with universal simulation fallback.
  */
 
@@ -7,9 +7,9 @@ const https = require('https');
 const { simulate } = require('./predict_algorithm');
 const { generateAngles } = require('./generate_angles');
 
-class PulseXClient {
+class BoomXClient {
   constructor(options = {}) {
-    this.token = options.token || process.env.PULSEX_TOKEN || null;
+    this.token = options.token || process.env.BOOMX_TOKEN || null;
     this.apiHost = options.apiHost || "https://api.superx.tools";
     this.scheduleHost = options.scheduleHost || "https://app.superx.so";
   }
@@ -107,4 +107,4 @@ class PulseXClient {
   }
 }
 
-module.exports = PulseXClient;
+module.exports = BoomXClient;

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * SuperX X (Twitter) API v2 Publisher & Scheduler
+ * BoomX X (Twitter) API v2 Publisher & Scheduler
  * Native Zero-Dependency OAuth 1.0a Client & Post Scheduler
  */
 
@@ -145,7 +145,7 @@ async function postTweet(text) {
   });
 }
 
-const SCHEDULE_FILE = path.resolve(process.cwd(), '.pulsex_scheduled.json');
+const SCHEDULE_FILE = path.resolve(process.cwd(), '.boomx_scheduled.json');
 
 function getScheduled() {
   if (fs.existsSync(SCHEDULE_FILE)) {
